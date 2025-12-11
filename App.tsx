@@ -130,13 +130,43 @@ const App: React.FC = () => {
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
         
         {/* Search Hero */}
-        <div className="max-w-3xl mx-auto mb-12 text-center">
-          <h1 className="text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
-            What do you need to <span className="text-indigo-600">find today?</span>
+<div className="max-w-3xl mx-auto mb-12 text-center">
+  <h1 className="text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+    Welcome to <span className="text-indigo-600">Junaid's Shopping Assistant</span>
+  </h1>
+  
+  <p className="text-lg text-slate-600 mb-8">
+    AI-powered shopping helper that finds best deals and recommendations for you.
+  </p>
+
+  <form onSubmit={handleSearch} className="relative max-w-2xl mx-auto">
+    <div className="relative">
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder={'Search for mobile phones, laptops, or any product...'}
+        className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-slate-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 shadow-sm text-lg outline-none transition-all placeholder:text-slate-400"
+      />
+      <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+      <button
+        type="submit"
+        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium transition-colors shadow-md"
+      >
+        Find Products
+      </button>
+    </div>
+    <p className="text-sm text-slate-500 mt-4">
+      Try: "gaming laptop" • "wireless headphones" • "kitchen appliances"
+    </p>
+  </form>
+</div>
           </h1>
           <p className="text-lg text-slate-600 mb-8">
             Our AI assistant curates the perfect products for your needs, whether it's a gift, a hobby, or a new project.
-          </p>
+          </p><h1 className="text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+  Welcome to <span className="text-indigo-600">Junaid's Shopping Assistant</span>
+
           
           <form onSubmit={handleSearch} className="relative max-w-2xl mx-auto">
             <div className="relative">
